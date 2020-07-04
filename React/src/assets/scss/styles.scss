@@ -1,0 +1,105 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+// color vars
+$color-black: #333;
+$grey-1: #666;
+$grey-2: #999;
+$light-blue: #0052d6;
+$light-blue-1: #0098e9;
+$dark-blue: #002856;
+$dark-blue-2: #013575;
+$blue-3: #596a85;
+$blue-4: #4a629e;
+$blue-5: #e9f0f5;
+$blue-6: #e6eeff;
+$white: #fff;
+$dark-orange: #db5d23;
+$dark-orange-2: rgba(219, 93, 35, 0.8);
+$dark-orange-3: #ff5900;
+$yellow-1: #f8a306;
+
+*:not(input), *:not(textarea) {
+  @media only screen and (max-width: 991px) {
+    user-select: auto;
+  }
+}
+
+.cap-case{
+  &::first-letter{
+    text-transform: uppercase;
+  }
+}
+
+// hide cross from IE input
+input::-ms-clear {
+  display: none;
+}
+
+
+.mui-icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+// transition effect
+%transitionSlide {
+  transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  transition-property: top, bottom, width;
+  transition-duration: 0.2s, 0.2s, 0.35s;
+  transition-timing-function: linear, linear, ease;
+}
+
+// scale animation
+@keyframes ScaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/************ Common css starts ************/
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $color-black;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-color: #ebeff4;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.pointer-none{
+  pointer-events: none;
+  &.disabled{
+    background-color: #e9ecef;
+  }
+}
+.c-pointer{
+  cursor: pointer;
+}
+
+.mr-lt-10{
+  margin-left: 10px;
+}
+
+.mr-lt-50{
+  margin-right: 50px;
+}
+
+
